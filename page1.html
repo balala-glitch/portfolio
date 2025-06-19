@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+      color: white;
+      background-image: url('page1bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      height: 4px;
+      background: rgb(255, 255, 255);
+      border-radius: 1px;
+    }
+
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px; 
+      width: 250px;
+      height: 100%;
+      background: #222;
+      padding-top: 60px;
+      transition: right 0.5s ease-in-out;
+      z-index: 1000;
+     
+    }
+
+    .side-menu.open {
+      right: 0;
+
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li{
+      margin-bottom: 15px;
+      
+    }
+
+    .side-menu li a{
+      width:100%;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 50px;
+      color: rgb(129, 129, 121);
+    }
+
+    .side-menu li a:hover {
+      background: #e49c9c;
+    }
+    .text{
+      color: rgb(0, 0, 0);
+    }
+    .heading{
+      font-family: 'Times New Roman', Times, serif;
+      flex-direction: column;
+      justify-content: center;
+      margin:30px;
+      font-size: 150px;
+      left: 20px;
+      color: black;
+      opacity: 0.7;
+    }
+    .main-text p{
+      margin-bottom: 50px;
+      margin-top: 50px;
+      margin-left: 80px;
+      margin-right: 80px;
+      line-height: 1.4;
+      font-size: 1.2rem;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="all_artworks.html">All Artworks</a></li>
+      <li><a href="acrylic.html">Acrylics</a></li>
+      <li><a href="oil.html">Oils</a></li>
+      <li><a href="sketch.html">Sketches</a></li>
+      <li><a href="charcoal.html">Charcoal</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Home</a></li>
+
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+  <div class="text">
+  <h1 class="heading">ART</h1>
+  <div class="main-text">
+  <p>Art is one of the first languages humanity ever spoke. Art began long before cities, and books, and playwrights,
+  and paintbrushes, and wood-mounted canvases. The first humans, with their first instances of art, spoke to something inside themselves:
+  the awe of life, the fear of death, the rhythm of the hunt, the magic of existence. In those flickering torchlit caves, art was born —
+  not for galleries, but for <i>meaning</i>.</p>
+
+  <p>Art is how we understand the world. Our brains crave patterns, shapes, stories. We see faces in clouds, animals in stars, and sometimes 
+  entire worlds in spilled ink. Art is not separate from us; it <i>is</i> us. A 5-year old’s wobbly bright sun at the corner of the page, 
+  random sketches of eyes and anime characters on the margins of the math notebook, carving your lover's name with a heart on a tree, the 
+  temporary drawings of sand on a beach, the permanent artworks done at the tattoo shop; these acts of leaving marks — as small as they may 
+  be — are defiance of meaninglessness.</p>
+
+  <p>In ancient times, art was ritual. Then it became storytelling. Then philosophy. Then rebellion. Now it's reflection, identity, protest, play.
+  Art helps us grieve, dream, fight, remember. It records who we are. It helps us survive; in dark times, people still make songs, still paint, 
+  still write poems. The way we arrange our lives — the colours we wear, the food we cook, the way we decorate our rooms, the way we tell stories
+  about ourselves — this is everyday art.
+  A sunrise seen through half-closed eyes. The way wind moves grass. The quiet geometry of city streets. The harmony of the countryside. </p>
+
+<p>Life is, at its very core, the most fundamental piece of art.</p>
+
+</div>
+</div>
+
+</body>
+</html>
