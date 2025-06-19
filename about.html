@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                height: 100vh;
+                background-image: url('aboutbg.png');
+                
+            }
+            .text{
+            color: rgb(185, 185, 185);
+            }
+            .heading{
+             font-family: 'Times New Roman', Times, serif;
+             flex-direction: column;
+             justify-content: center;
+             margin:30px;
+             font-size: 150px;
+             left: 20px;
+             color: rgb(192, 192, 192);
+            opacity: 0.5;
+            }
+            .main-text {
+             margin-top: 30px;
+             margin: 50px;
+             padding: 30px;
+             line-height: 1.4;
+             font-size: 20px;
+            }
+            .img{
+             width: 350px;
+             height: auto;
+             margin: 5px 20px 20px 40px;
+             float:right;
+             border-radius: 50%;
+             border: 12px  rgb(48, 45, 45);     
+             box-shadow: 5px 5px 15px rgb(0, 0, 0); 
+            }
+            .social-links{
+                margin-bottom: 60px;
+                margin-left: 60px;
+                padding: 2%;
+            }
+                .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      height: 4px;
+      background: rgb(255, 255, 255);
+      border-radius: 1px;
+    }
+
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px; 
+      width: 250px;
+      height: 100%;
+      background: #222;
+      padding-top: 60px;
+      transition: right 0.5s ease-in-out;
+      z-index: 1000;
+     
+    }
+
+    .side-menu.open {
+      right: 0; 
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li{
+      margin-bottom: 15px;
+      
+    }
+
+    .side-menu li a{
+      width:100%;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 50px;
+      color: rgb(129, 129, 121);
+    }
+
+    .side-menu li a:hover {
+      background: #e49c9c;
+    }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="text">
+        <h1 class="heading">ABOUT</h1>
+        <img class="img" src="appleman.jpg" alt="a photo of Appleman - a human with an apple head.">
+        <p class="main-text">hello dudes, it is I, the shristi duarah</p>
+        <div class="social-links">
+        Follow me on 
+        <a href="https://www.instagram.com/_balala_artist_era_/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+        alt="Instagram" width="40" height="40">
+        </a>
+        </div>
+        </div>
+          <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="all_artworks.html">All Artworks</a></li>
+      <li><a href="acrylic.html">Acrylics</a></li>
+      <li><a href="oil.html">Oils</a></li>
+      <li><a href="sketch.html">Sketches</a></li>
+      <li><a href="charcoal.html">Charcoal</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Home</a></li>
+
+    </ul>
+  </div>
+
+          <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+        
+
+    </body>
+</html>

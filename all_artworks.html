@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+            body{
+                height: 100vh;
+                font-family: 'Times New Roman', Times, serif;
+                background-image: url('backg.jpg');
+            }
+            .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      height: 4px;
+      background: rgb(120, 111, 111);
+      border-radius: 1px;
+    }
+
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px; 
+      width: 250px;
+      height: 100%;
+      background: #222;
+      padding-top: 60px;
+      transition: right 0.5s ease-in-out;
+      z-index: 1000;
+     
+    }
+
+    .side-menu.open {
+      right: 0; /* slides in */
+
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li{
+      margin-bottom: 15px;
+      
+    }
+
+    .side-menu li a{
+      width:100%;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 50px;
+      color: rgb(129, 129, 121);
+    }
+
+    .side-menu li a:hover {
+      background: #e49c9c;
+    }
+            .text{
+            color: rgb(0, 0, 0);
+            }
+            .heading{
+             font-family: 'Times New Roman', Times, serif;
+             flex-direction: column;
+             justify-content: center;
+             margin:30px;
+             font-size: 150px;
+             left: 20px;
+             color: black;
+             opacity: 0.7;
+             margin-bottom: 100px;
+            }
+            .main-text {
+             margin-top: 30px;
+             margin: 50px;
+             padding: 30px;
+             line-height: 1.4;
+             font-size: 20px;
+            }
+            .img{
+             width: 300px;
+             height: auto;
+             margin: 40px auto;
+             margin-bottom: 20px;
+             display: block;
+             border: 12px groove rgb(84, 59, 22);     
+             box-shadow: 5px 5px 15px rgb(28, 19, 6); 
+            }
+
+        </style>
+
+    </head>
+    <body>
+          <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Slide-out menu -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="all_artworks.html">All Artworks</a></li>
+      <li><a href="acrylic.html">Acrylics</a></li>
+      <li><a href="oil.html">Oils</a></li>
+      <li><a href="sketch.html">Sketches</a></li>
+      <li><a href="charcoal.html">Charcoal</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Home</a></li>
+
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+        <div class="text">
+        <h1 class="heading">ALL ARTWORKS</h1>
+        <img class="img" src="acrylic1.jpg" alt="a painting of two hands making a clay pot.">
+        <p class="main-text">An acrylic study on the texture of moist clay.</p>
+        <img class="img" src="acrylic2.jpg" alt="Two hands reach out to one another, one bleeding onto the other. White camellia gets stained red by the blood.">
+        <p class="main-text">idk wtf this is, smth emo</p>
+        <img class="img" src="acrylic3.jpg" alt="a painting of a poinsettia plant.">
+        <p class="main-text">This is a painting of a Poinsettia that once bloomed in my father's garden — a rare plant in our hometown. When I first asked my father its name, he simply smiled and said he didn't know.
+          And so, together, we spent hours — two curious souls — scrolling through endless searches, following strange details and distant facts, until at last, we found its name.
+          I have never forgotten it since.
+          The Poinsettia is gone now — uprooted along with the rest of my father's old garden, to make space for a garage. But in its place, my father built a new garden on the terrace — grander, greener, and just as full of life.
+          He still tends to it with the same quiet passion.
+          This painting holds a memory: of a curious child and her equally curious father, lost in the simple joy of learning the story of a single, crimson flower.
+        <img class="img" src="acrylic4.jpg" alt="a painting of an underwater scene with a turtle.">
+        <p class="main-text">tortol go blub blub</p>
+        <img class="img" src="acrylic5.jpg" alt="a painting of a cat.">
+        <p class="main-text">This is a painting of repeated failure. I painted over this one 6x6 inch canvas again and again, changing subjects, changing mediums, changing perspectives. In the end, I never ended up liking the 
+          end product. It is uneven, scratchy, and worst of all, doesn't convey any emotions in me except my frustrations at failure.
+          This small square serves as a quiet reminder: that even after years with the brush, I am still capable of falling short of my own expectations. And yet, therein lies the beauty — that with every stumble, every unfinished
+          piece, the next stroke may fall better or worse — and that uncertain dance is what makes it all so endlessly captivating.
+        </p>
+        <img class="img" src="acrylic6.jpg" alt="a painting of two agressive wolves.">
+        <p class="main-text">An animal study using acrylics.</p>
+        <img class="img" src="acrylic7.jpg" alt="a painitng of a rose in a neon frame.">
+        <p class="main-text">A painting study to recreate the glow of neon lights and shine of soap bubbles.</p>
+        <img class="img" src="acrylic8.jpg" alt="underwater mermmaid.">
+        <p class="main-text">A study of how light shining through a water surface reflects on a face.</p>
+        <img class="img" src="charcoal2.jpg" alt="old charcoal man.">
+        <p class="main-text">One of my first charcoal artwork. I had a hard time blending and shading with it.</p>
+        <img class="img" src="charcoal1.jpg" alt="hot charcoal man.">
+        <p class="main-text">Another human face study using charcoal, after getting a hang of it.</p>
+        <img class="img" src="charcoal4.jpg" alt="a clown and me.">
+        <p class="main-text">An artpiece depicting the reflection of self - a semi-self portrait.</p>
+        <img class="img" src="charcoal5.jpg" alt="charcoal of cloth texture (looks vry bad).">
+        <p class="main-text">A study of cloth texture usinng charcoal.</p>
+        <img class="img" src="charcoal3.jpg" alt="graphite of marble statue.">
+        <p class="main-text">A study of marble statue using graphite.</p>
+        <img class="img" src="colorpencil1.jpg" alt="bright colors, a girl with yellow eyeshadow, and flowers.">
+        <p class="main-text">A color pencil work of a profile of a girl. I mostly worked to try and resemble the natural tone of the sunlight hit skin.</p>
+        <img class="img" src="oil1.jpg" alt="man wrapped in plastic.">
+        <p class="main-text">Tried to recreate the reflections from the surface of a plastic usiing oil paints.</p>
+        <img class="img" src="oil2.jpg" alt="woman blindfolded by bandages, holding flowers.">
+        <p class="main-text">One of my first oil paintings. I didn't have much experience with oil paints and was pretty happy with how it turned out.</p>
+        <img class="img" src= "sketch1.jpg" alt="birds and animals, quick sketches.">
+        <p class="main-text">Warm up sketches(1)</p>
+        <img class="img" src="sketch2.jpg" alt="dogs, quick sketches.">
+        <p class="main-text">Warm up sketches(2)</p>
+        <img class="img" src="sketch3.jpg" alt="human heads, quick sketches.">
+        <p class="main-text">Warm up sketches(3)</p>
+        <img class="img" src="sketch4.jpg" alt="a girl surrounded by chaos.">
+        <p class="main-text">A sketch on the prompt "chaos".</p>
+        </div>
+
+    </body>
+</html>

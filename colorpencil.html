@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+            body{
+                height: 100vh;
+                font-family: 'Times New Roman', Times, serif;
+                background-image: url('backg.jpg');
+            }
+            .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      height: 4px;
+      background: rgb(120, 111, 111);
+      border-radius: 1px;
+    }
+
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px; 
+      width: 250px;
+      height: 100%;
+      background: #222;
+      padding-top: 60px;
+      transition: right 0.5s ease-in-out;
+      z-index: 1000;
+     
+    }
+
+    .side-menu.open {
+      right: 0; /* slides in */
+
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li{
+      margin-bottom: 15px;
+      
+    }
+
+    .side-menu li a{
+      width:100%;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 50px;
+      color: rgb(129, 129, 121);
+    }
+
+    .side-menu li a:hover {
+      background: #e49c9c;
+    }
+            .text{
+            color: rgb(0, 0, 0);
+            }
+            .heading{
+             font-family: 'Times New Roman', Times, serif;
+             flex-direction: column;
+             justify-content: center;
+             margin:30px;
+             font-size: 150px;
+             left: 20px;
+             color: black;
+             opacity: 0.7;
+             margin-bottom: 100px;
+            }
+            .main-text {
+             margin-top: 30px;
+             margin: 50px;
+             padding: 30px;
+             line-height: 1.4;
+             font-size: 20px;
+            }
+            .img{
+             width: 300px;
+             height: auto;
+             margin: 40px auto;
+             margin-bottom: 20px;
+             display: block;
+             border: 12px groove rgb(84, 59, 22);     
+             box-shadow: 5px 5px 15px rgb(28, 19, 6); 
+            }
+
+        </style>
+
+    </head>
+    <body>
+          <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Slide-out menu -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="all_artworks.html">All Artworks</a></li>
+      <li><a href="all_artworks.html">Acrylics</a></li>
+      <li><a href="all_artworks.html">Oils</a></li>
+      <li><a href="all_artworks.html">Sketches</a></li>
+      <li><a href="all_artworks.html">Charcoal</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Home</a></li>
+
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+        <div class="text">
+        <h1 class="heading">COLORPENCIL ARTWORKS</h1>
+        <img class="img" src="colorpencil1.jpg" alt="bright colors, a girl with yellow eyeshadow, and flowers.">
+        <p class="main-text">A color pencil work of a profile of a girl. I mostly worked to try and resemble the natural tone of the sunlight hit skin.</p>
+    </body>
+</html>
